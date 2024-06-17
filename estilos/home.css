@@ -23,7 +23,7 @@ header {
     border-radius: 25px; /* Set the desired border radius */
 }
 .navbar-toggler{
-    margin-left: 20px;
+    margin-left: 28px;
 }
 
 @media (max-width: 320px) { /* Para telas menores (tablets) */
