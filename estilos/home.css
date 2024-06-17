@@ -44,8 +44,8 @@ header {
 
  @media (max-width: 520px) {
     #imgpromo  {
-      max-width: 400px;
-      max-height:663px;
+      max-width: 420px;
+      max-height:696px;
       margin: 0 auto; /* Centraliza horizontalmente */
       border-radius: 10px; /* Arredonda a imagem */
     }
