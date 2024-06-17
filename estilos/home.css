@@ -16,7 +16,7 @@ header {
 }
 #começar {
     position: relative; /* Posicionamento relativo para usarmos left */
-    left: 13%; /* Posiciona o botão à direita do conteúdo */
+    left: 10%; /* Posiciona o botão à direita do conteúdo */
 
 }
 #começar .btn-primary {
