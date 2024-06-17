@@ -16,12 +16,15 @@ header {
 }
 #começar {
     position: relative; /* Posicionamento relativo para usarmos left */
-    left: 12%; /* Posiciona o botão à direita do conteúdo */
+    left: 15%; /* Posiciona o botão à direita do conteúdo */
     margin-left: -15px; /* Compensa a largura do botão para evitar sobreposição */
 }
 #começar .btn-primary {
     border-radius: 25px; /* Set the desired border radius */
-  }
+}
+.navbar-toggler{
+    margin-left: 20px;
+}
 
 @media (max-width: 320px) { /* Para telas menores (tablets) */
     #começar {
