@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+}
+
+header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow properties */
+  }
+
+.navbar-brand img {
+    max-width: 95px;
+    max-height: 109px;
+    margin-left: 15px;
+}
+#começar {
+    position: relative; /* Posicionamento relativo para usarmos left */
+    left: 16%; /* Posiciona o botão à direita do conteúdo */
+    margin-left: -15px; /* Compensa a largura do botão para evitar sobreposição */
+}
+#começar .btn-primary {
+    border-radius: 25px; /* Set the desired border radius */
+  }
+
+@media (max-width: 320px) { /* Para telas menores (tablets) */
+    #começar {
+        position: static; /* Remove o posicionamento relativo */
+        margin-left: 0; /* Remove a margem esquerda */
+    }
+}
