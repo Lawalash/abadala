@@ -4,9 +4,10 @@
     margin:0;
     padding:0;
 }
-
+/* HEADER*/
 header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow properties */
+    margin-bottom: 30px;
   }
 
 .navbar-brand img {
@@ -33,3 +34,26 @@ header {
         margin-left: 0; /* Remove a margem esquerda */
     }
 }
+
+/*MAIN*/
+
+#imgpromo {
+    height: auto; /* Ajuste automático da altura */
+  }
+
+
+ @media (max-width: 520px) {
+    #imgpromo  {
+      max-width: 420px;
+      height: auto;
+      margin: 0 auto; /* Centraliza horizontalmente */
+      border-radius: 10px; /* Arredonda a imagem */
+    }
+
+    #imagem-centralizada {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+  }
