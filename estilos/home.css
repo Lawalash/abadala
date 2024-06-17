@@ -24,6 +24,7 @@ header {
 }
 .navbar-toggler{
     margin-left: 28px;
+    border: none;
 }
 
 @media (max-width: 320px) { /* Para telas menores (tablets) */
