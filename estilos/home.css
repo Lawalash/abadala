@@ -47,18 +47,23 @@ header {
     body > main{
         margin: 20px;
     }
-    #imgpromo  {
-      max-width: 420px;
-      max-height:696px;
-      margin: 0 auto; /* Centraliza horizontalmente */
-      border-radius: 10px; /* Arredonda a imagem */
-    }
+   
 
     #imagem-centralizada {
+        background-image: url(../imagens/planos/promotion.jpeg);
         display: flex;
-        justify-content: center;
+        margin-bottom: 15px;
         align-items: center;
-        margin-bottom: 30px;
+        justify-content: center;
+        width: 100%;
+        height: 660px;
+        border-radius: 16px;
+        background-color: transparent;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+
     }
 
     #h1local{
@@ -143,7 +148,7 @@ header {
       }
       
       .price {
-        font-size: 3rem;
+        font-size: 2rem;
         line-height: 1;
         font-weight: 600;
         color: black;
