@@ -24,6 +24,13 @@ header {
 #começar .btn-primary {
     border-radius: 25px; /* Set the desired border radius */
 }
+.btn-primary {
+    background-color: #FFAD12;
+    border: black;
+}
+.btn-primary:hover {
+    background-color: #d6900c;
+}
 .navbar-toggler{
     margin-left: 28px;
     border: none;
