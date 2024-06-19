@@ -96,7 +96,8 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 300px;
+    max-width: 374px;
+    margin: 30px;
     padding: 14px 20px;
     color: black;
     text-decoration: none;
