@@ -5,9 +5,6 @@
     padding:0;
 }
 
-body > main{
-    margin: 20px;
-}
 /* HEADER*/
 header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow properties */
@@ -47,6 +44,9 @@ header {
 
 
  @media (max-width: 520px) {
+    body > main{
+        margin: 38px;
+    }
     #imgpromo  {
       max-width: 420px;
       max-height:696px;
