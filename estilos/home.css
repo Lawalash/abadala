@@ -383,4 +383,31 @@ header {
     box-sizing: border-box; /* Inclui padding e borda nas dimensões totais */
 }
 
+/* WhatsApp Floating Button */
+.whatsapp-button {
+    position: fixed;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: #25d365bd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+
   }
