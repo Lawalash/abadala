@@ -133,6 +133,8 @@
           </section>
           <p id="pCondicao">Confira as condições da sua academia escolhida</p>
 
+
+
           <section id="section3">
             <h1 id="h1experiencia">Experiência <span style="color:#FFAD12;">ABDALA CLUB</span></h1>
             
@@ -142,11 +144,13 @@
                     <path d="M464 384.39a32 32 0 01-13-2.77 15.77 15.77 0 01-2.71-1.54l-82.71-58.22A32 32 0 01352 295.7v-79.4a32 32 0 0113.58-26.16l82.71-58.22a15.77 15.77 0 012.71-1.54 32 32 0 0145 29.24v192.76a32 32 0 01-32 32zM268 400H84a68.07 68.07 0 01-68-68V180a68.07 68.07 0 0168-68h184.48A67.6 67.6 0 01336 179.52V332a68.07 68.07 0 01-68 68z"></path>
                   </svg>
                 </div>
+
+                
                 <p class="card-title">ABDALA CLUB</p>
                 <p class="card-des">
                   Conheça as duas unidades
                 </p>
-                <div class="card-btn">
+                <div class="card-btn" id="openModal">
                   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0" fill="currentColor" stroke="currentColor">
                     <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
                   </svg>
@@ -156,10 +160,25 @@
 
           </section>
 
+          <!-- Modal -->
+        <!-- Modal -->
+        <div id="videoModal" class="modal">
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <video id="videoFrame" width="100%" height="auto" controls>
+                    <source src="../videoframe/kenvinlevrone.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </div>
+
          
     </main>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../javascript/home.js"></script>
+  
 </body>
 </html>
