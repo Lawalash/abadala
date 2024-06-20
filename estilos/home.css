@@ -50,7 +50,7 @@ header {
   }
 
 
- @media (max-width: 520px) {
+ @media (max-width: 620px) {
     body > main{
         margin: 20px;
     }
@@ -417,4 +417,49 @@ header {
     height: 35px;
 }
 
-  }
+/* CSS FOOTER */
+footer {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+footer img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+footer hr {
+  border: none;
+  border-top: 1.1px solid #ffffff;
+  margin: 10px 0;
+}
+
+footer h1 {
+  font-size: 18px;
+  margin: 25px 0;
+  text-align: left;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: flex-start; /* Alinha as colunas à esquerda */
+  gap: 50px; /* Espaçamento entre as colunas */
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 5px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+}
