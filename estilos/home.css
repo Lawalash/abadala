@@ -50,7 +50,7 @@ header {
   }
 
 
- @media (max-width: 620px) {
+ @media (max-width: 550px) {
     body > main{
         margin: 20px;
     }
