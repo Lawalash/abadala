@@ -50,7 +50,7 @@ header {
   }
 
 
- @media (max-width: 520px) {
+ @media (max-width: 620px) {
     body > main{
         margin: 20px;
     }
@@ -416,7 +416,6 @@ header {
     width: 35px;
     height: 35px;
 }
-
 /* CSS FOOTER */
 footer {
   background-color: black;
@@ -456,5 +455,4 @@ footer ul li a {
   text-decoration: none;
   color: white;
 }
-
 }
