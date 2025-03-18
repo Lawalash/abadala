@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdala Club Academia - Sua Academia Completa</title>
+  <link rel="stylesheet" href="estilos/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <button class="nav-toggle" id="navToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="logo">
+      <img src="/imagens/logo/logo-teste.png" alt="AbdalaClubAcademia Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#locations">Academias</a></li>
+        <li><a href="#plans">Planos</a></li>
+        <li><a href="#experience">Experiência</a></li>
+        <li><a href="#testimonials">Depoimentos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+    <!-- Removido o theme switch -->
+  </header>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-sidebar" id="closeSidebar">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#locations">Academias</a></li>
+      <li><a href="#plans">Planos</a></li>
+      <li><a href="#experience">Experiência</a></li>
+      <li><a href="#testimonials">Depoimentos</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </div>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <!-- Vídeo de fundo -->
+    <video autoplay muted loop>
+      <source src="/api/placeholder/1920/1080" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Transforme seu corpo e sua vida</h1>
+      <p>Na Abdala Club Academia, nós oferecemos equipamentos modernos, instrutores qualificados e um ambiente motivador para ajudar você a alcançar seus objetivos fitness.</p>
+      <a href="#plans" class="btn btn-primary">Conheça Nossos Planos</a>
+    </div>
+    <div class="scroll-arrow">
+      <i class="fas fa-angle-down"></i>
+    </div>
+  </section>
+
+  <!-- LOCATIONS SECTION -->
+  <section class="locations" id="locations">
+    <div class="locations-overlay">
+      <h2 class="section-title">Nossas Academias</h2>
+      <p class="section-subtitle">Escolha entre nossas unidades disponíveis</p>
+      <a href="html/Academias.html" class="btn btn-primary">Conhecer nossas unidades</a>
+    </div>
+  </section>
+
+  <!-- PLANS SECTION -->
+<section class="plans" id="plans">
+  <h2 class="section-title">Nossos Planos</h2>
+  <p class="section-subtitle">Escolha o plano que melhor se adapta às suas necessidades e objetivos.</p>
+  
+  <div class="plans-grid">
+    <!-- Card 1: Plano Individual -->
+    <div class="plan-card" onclick="togglePlanDetails(event, 'individual-details')">
+      <div class="plan-header">
+        <h3>Plano Individual</h3>
+        <div class="plan-price">R$70,00<span>/mês</span></div>
+      </div>
+      <div class="plan-features">
+        <p class="plan-payment-options">
+          <i class="fas fa-credit-card"></i>  Condições especiais de pagamento
+        </p>
+        <div class="benefits-toggle">
+          <span>Ver benefícios</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <ul class="benefits-list" id="individual-details">
+          <li><i class="fas fa-check"></i> Acesso as 2 academias</li>
+          <li><i class="fas fa-check"></i> Acesso ao AbdalaQRmachine</li>
+          <li><i class="fas fa-check"></i> Segunda a sexta, sábados e feriados!</li>
+          <li><i class="fas fa-check"></i> Equipamentos diversos</li>
+          <li><i class="fas fa-check"></i> Personais treiners qualificados</li>
+          <li><i class="fas fa-check"></i> Acompanhamento premium</li>
+        </ul>
+        <a href="/html/Cadastro.html" class="btn btn-primary">Assinar Agora</a>
+      </div>
+    </div>
+    
+    <!-- Card 2: Plano Anual -->
+    <div class="plan-card featured" onclick="togglePlanDetails(event, 'annual-details')">
+      <div class="plan-header">
+        <h3>Plano Anual</h3>
+        <div class="plan-price">R$700,00<span>/ano</span></div>
+        <div class="monthly-price">Apenas R$58,33 por mês</div>
+      </div>
+      <div class="plan-features">
+        <p class="plan-payment-options">
+          <i class="fas fa-credit-card"></i> Parcelamento em até 12x no cartão de crédito
+        </p>
+        <div class="benefits-toggle">
+          <span>Ver benefícios</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <ul class="benefits-list" id="annual-details">
+          <li><i class="fas fa-check"></i> Acesso as 2 academias</li>
+          <li><i class="fas fa-check"></i> Acesso ao AbdalaQRmachine</li>
+          <li><i class="fas fa-check"></i> Segunda a sexta, sábados e feriados!</li>
+          <li><i class="fas fa-check"></i> Equipamentos diversos</li>
+          <li><i class="fas fa-check"></i> Personais treiners qualificados</li>
+          <li><i class="fas fa-check"></i> Acompanhamento premium</li>
+          <li><i class="fas fa-check"></i> Economia de R$140,00 em relação ao plano mensal</li>
+        </ul>
+        <a href="/html/Cadastro.html" class="btn btn-secondary">Assinar Agora</a>
+      </div>
+    </div>
+    
+    <!-- Card 3: Personalize seu plano -->
+    <div class="plan-card premium" onclick="togglePlanDetails(event, 'premium-details')">
+      <div class="plan-header">
+        <h3>Personalize seu plano</h3>
+        <div class="plan-price">Sob Consulta</div>
+      </div>
+      <div class="plan-features">
+        <p class="plan-payment-options">
+          <i class="fas fa-credit-card"></i> Condições especiais de pagamento
+        </p>
+        <div class="benefits-toggle">
+          <span>Ver benefícios</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <ul class="benefits-list" id="premium-details">
+          <li><i class="fas fa-check"></i> Acesso as 2 academias</li>
+          <li><i class="fas fa-check"></i> Acesso ao AbdalaQRmachine</li>
+          <li><i class="fas fa-check"></i> Segunda a sexta, sábados e feriados!</li>
+          <li><i class="fas fa-check"></i> Equipamentos diversos</li>
+          <li><i class="fas fa-check"></i> Personais treiners qualificados</li>
+          <li><i class="fas fa-check"></i> Acompanhamento premium</li>
+          <li><i class="fas fa-check"></i> Opções adicionais para personalização: escolha entre diversos planos, inclusive voltados para famílias e outras necessidades</li>
+        </ul>
+        <a href="/html/Cadastro.html" class="btn btn-primary">Personalize Agora</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- EXPERIENCE SECTION (Vídeo embutido na caixa) -->
+  <section class="experience" id="experience">
+    <h2 class="section-title">Experimente Nossa Academia</h2>
+    <p class="section-subtitle">Conheça nossa estrutura e entenda por que somos a melhor escolha para você alcançar seus objetivos fitness.</p>
+    
+    <div class="mockup-container">
+        <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="video-wrapper">
+                <video id="gym-video" controls autoplay muted loop>
+                    <source src="./videos/academiapalmeira.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos HTML5.
+                </video>
+                <div class="video-overlay">
+                    <button class="play-btn" aria-label="Reproduzir vídeo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="phone-home-button"></div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="espacos" id="espacos">
+    <h2 class="section-title">Nossos Espaços</h2>
+    <p class="section-subtitle">Conheça as instalações modernas da Abdala Club Academia</p>
+    
+    <div class="espacos-carrossel">
+      <div class="espacos-slider">
+        <div class="espaco-card">
+          <div class="espaco-img-container">
+            <img src="./imagens/academia/academia1.png" alt="Área de Musculação" class="espaco-img">
+            <div class="espaco-overlay">
+              <h3>Área de Musculação</h3>
+            </div>
+          </div>
+          <div class="espaco-info">
+            <h4>Área de Musculação</h4>
+            <p>Equipamentos de última geração para um treino completo e eficiente.</p>
+            <ul class="espaco-features">
+              <li><i class="fas fa-check-circle"></i> Equipamentos Technogym</li>
+              <li><i class="fas fa-check-circle"></i> Área de 300m²</li>
+              <li><i class="fas fa-check-circle"></i> Instrutores especializados</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="espaco-card">
+          <div class="espaco-img-container">
+            <img src="./imagens/academia/academia1.png" alt="Estúdio de Spinning" class="espaco-img">
+            <div class="espaco-overlay">
+              <h3>Estúdio de Spinning</h3>
+            </div>
+          </div>
+          <div class="espaco-info">
+            <h4>Estúdio de Spinning</h4>
+            <p>Aulas imersivas com iluminação e sonorização especial.</p>
+            <ul class="espaco-features">
+              <li><i class="fas fa-check-circle"></i> 25 bikes profissionais</li>
+              <li><i class="fas fa-check-circle"></i> Sistema de áudio Dolby</li>
+              <li><i class="fas fa-check-circle"></i> Iluminação LED sincronizada</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="espaco-card">
+          <div class="espaco-img-container">
+            <img src="./imagens/academia/academia1.png" alt="Piscina Aquecida" class="espaco-img">
+            <div class="espaco-overlay">
+              <h3>Piscina Aquecida</h3>
+            </div>
+          </div>
+          <div class="espaco-info">
+            <h4>Piscina Aquecida</h4>
+            <p>Piscina semiolímpica com temperatura controlada para natação e hidroginástica.</p>
+            <ul class="espaco-features">
+              <li><i class="fas fa-check-circle"></i> 25m de comprimento</li>
+              <li><i class="fas fa-check-circle"></i> Temperatura constante 28°C</li>
+              <li><i class="fas fa-check-circle"></i> Tratamento UV avançado</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="espaco-card">
+          <div class="espaco-img-container">
+            <img src="./imagens/academia/academia1.png" alt="Estúdio de Yoga" class="espaco-img">
+            <div class="espaco-overlay">
+              <h3>Estúdio de Yoga</h3>
+            </div>
+          </div>
+          <div class="espaco-info">
+            <h4>Estúdio de Yoga</h4>
+            <p>Ambiente tranquilo e acolhedor para prática de yoga e meditação.</p>
+            <ul class="espaco-features">
+              <li><i class="fas fa-check-circle"></i> Piso de madeira natural</li>
+              <li><i class="fas fa-check-circle"></i> Iluminação ajustável</li>
+              <li><i class="fas fa-check-circle"></i> Equipamentos premium</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="carrossel-controls">
+        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <div class="carrossel-indicators"></div>
+        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="/imagens/logo/logo-teste.png" alt="AbdalaClubAcademia Logo">
+      </div>
+      <div class="footer-links">
+        <h4>Links Úteis</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#locations">Academias</a></li>
+          <li><a href="#plans">Planos</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#testimonials">Depoimentos</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+        <p><i class="fas fa-envelope"></i> contato@fitacademy.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - Centro</p>
+      </div>
+      <div class="footer-social">
+        <h4>Siga-nos</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Abdala Club Academia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="javascript/home.js"></script>
+</body>
+</html>

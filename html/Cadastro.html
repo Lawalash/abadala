@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdala Club Academia - Cadastro</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome para ícones -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <!-- CSS Customizado -->
+  <link rel="stylesheet" href="/estilos/cadastro.css" />
+</head>
+<body>
+  <!-- Header com botão de voltar direcionando para index2.html -->
+  <header>
+    <button class="back-btn" onclick="location.href='../index.html'">&lt;</button>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section class="form-section">
+      <div class="form-container">
+        <div class="form-header">
+          <h2>Cadastro de Matrícula</h2>
+          <p>Preencha os dados abaixo para iniciar sua jornada fitness</p>
+        </div>
+
+        <!-- Indicador de Etapas -->
+        <div class="step-indicator">
+          <div class="step active" data-step="1">1</div>
+          <div class="step" data-step="2">2</div>
+          <div class="step" data-step="3">3</div>
+          <div class="step" data-step="4">4</div>
+          <div class="step" data-step="5">5</div>
+          <div class="step" data-step="6">6</div>
+        </div>
+
+        <!-- Formulário Multi-etapas -->
+        <form id="registrationForm">
+          <!-- Etapa 1: Escolha da Unidade -->
+          <div class="form-step active" id="step1">
+            <h4>Escolha da Unidade</h4>
+            <label for="unit">Selecione a unidade mais próxima:</label>
+            <select id="unit" required>
+              <option value="">Selecione uma unidade</option>
+              <option value="centro">Abdala Club Academia Cuítes</option>
+              <option value="norte">Abdala Club Academia Palmeira</option>
+            </select>
+            <div class="form-navigation">
+              <button type="button" class="btn btn-next" id="toStep2">
+                Avançar <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Etapa 2: Seleção do Plano -->
+          <div class="form-step" id="step2">
+            <h3 class="section-title">Escolha seu Plano</h3>
+            <p class="section-description">Selecione o plano que melhor atende às suas necessidades</p>
+
+            <!-- LISTA DE PLANOS -->
+            <div class="plan-cards">
+              <!-- Plano Individual -->
+              <div class="plan-card"
+                  data-plan="individual"
+                  data-matricula3="70"
+                  data-mensal3="60"
+                  data-matricula7="80"
+                  data-mensal7="70">
+                <div class="plan-title">Plano Individual</div>
+                <div class="plan-price">A partir de R$60/mês</div>
+                <div class="plan-description">Ideal para quem quer flexibilidade de treinos</div>
+                
+                <div class="benefits-container">
+                  <div class="benefits-header">
+                    <span class="benefits-toggle">Ver benefícios <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  
+                  <ul class="plan-features">
+                    <li>Escolha entre 3 dias ou todos os dias</li>
+                    <li>Acesso às 2 academias</li>
+                    <li>Acesso ao AbdalaQRmachine</li>
+                    <li>Segunda a sexta, sábados e feriados</li>
+                    <li>Equipamentos diversos</li>
+                    <li>Personals trainers qualificados</li>
+                    <li>Acompanhamento premium</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Plano Bimestral (2 meses) -->
+              <div class="plan-card"
+                  data-plan="bimestral"
+                  data-matricula="140"
+                  data-mensal="65">
+                <div class="plan-title">Plano Bimestral</div>
+                <div class="plan-price">Total: R$140</div>
+                <div class="plan-description">Ideal para quem quer 2 meses de treino</div>
+                
+                <div class="benefits-container">
+                  <div class="benefits-header">
+                    <span class="benefits-toggle">Ver benefícios <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  <ul class="plan-features">
+                    <li>Desconto para estudantes e militares: R$130</li>
+                    <li>Acesso às 2 academias</li>
+                    <li>Acesso ao AbdalaQRmachine</li>
+                    <li>Segunda a sexta, sábados e feriados</li>
+                    <li>Equipamentos diversos</li>
+                    <li>Personals trainers qualificados</li>
+                    <li>Acompanhamento premium</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Plano 2 pessoas -->
+              <div class="plan-card"
+                  data-plan="2pessoas"
+                  data-matricula="150"
+                  data-mensal="130">
+                <div class="plan-title">Plano 2 pessoas</div>
+                <div class="plan-price">Mensal: R$130</div>
+                <div class="plan-description">Treine com um amigo ou familiar</div>
+                
+                <div class="benefits-container">
+                  <div class="benefits-header">
+                    <span class="benefits-toggle">Ver benefícios <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  <ul class="plan-features">
+                    <li>Desconto especial para duas pessoas</li>
+                    <li>Acesso às 2 academias</li>
+                    <li>Acesso ao AbdalaQRmachine</li>
+                    <li>Segunda a sexta, sábados e feriados</li>
+                    <li>Equipamentos diversos</li>
+                    <li>Personals trainers qualificados</li>
+                    <li>Acompanhamento premium</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Plano 3 pessoas -->
+              <div class="plan-card"
+                  data-plan="3pessoas"
+                  data-matricula="210"
+                  data-mensal="180">
+                <div class="plan-title">Plano 3 pessoas</div>
+                <div class="plan-price">Mensal: R$180</div>
+                <div class="plan-description">Treine com família ou amigos</div>
+                
+                <div class="benefits-container">
+                  <div class="benefits-header">
+                    <span class="benefits-toggle">Ver benefícios <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  <ul class="plan-features">
+                    <li>Desconto especial para três pessoas</li>
+                    <li>Acesso às 2 academias</li>
+                    <li>Acesso ao AbdalaQRmachine</li>
+                    <li>Segunda a sexta, sábados e feriados</li>
+                    <li>Equipamentos diversos</li>
+                    <li>Personals trainers qualificados</li>
+                    <li>Acompanhamento premium</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Plano 4 pessoas -->
+              <div class="plan-card"
+                  data-plan="4pessoas"
+                  data-matricula="280"
+                  data-mensal="240">
+                <div class="plan-title">Plano 4 pessoas</div>
+                <div class="plan-price">Mensal: R$240</div>
+                <div class="plan-description">Ideal para grupos de amigos ou família</div>
+                
+                <div class="benefits-container">
+                  <div class="benefits-header">
+                    <span class="benefits-toggle">Ver benefícios <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  <ul class="plan-features">
+                    <li>Desconto especial para quatro pessoas</li>
+                    <li>Acesso às 2 academias</li>
+                    <li>Acesso ao AbdalaQRmachine</li>
+                    <li>Segunda a sexta, sábados e feriados</li>
+                    <li>Equipamentos diversos</li>
+                    <li>Personals trainers qualificados</li>
+                    <li>Acompanhamento premium</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Plano 5 pessoas -->
+              <div class="plan-card"
+                  data-plan="5pessoas"
+                  data-matricula="350"
+                  data-mensal="320">
+                <div class="plan-title">Plano 5 pessoas</div>
+                <div class="plan-price">Mensal: R$320</div>
+                <div class="plan-description">Perfeito para grupos grandes</div>
+                
+                <div class="benefits-container">
+                  <div class="benefits-header">
+                    <span class="benefits-toggle">Ver benefícios <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  <ul class="plan-features">
+                    <li>Desconto especial para cinco pessoas</li>
+                    <li>Acesso às 2 academias</li>
+                    <li>Acesso ao AbdalaQRmachine</li>
+                    <li>Segunda a sexta, sábados e feriados</li>
+                    <li>Equipamentos diversos</li>
+                    <li>Personals trainers qualificados</li>
+                    <li>Acompanhamento premium</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Plano Trimestral (3 meses) -->
+              <div class="plan-card highlight-plan"
+                  data-plan="trimestral"
+                  data-total="190">
+                <div class="plan-title">Plano Trimestral</div>
+                <div class="plan-price">Total: R$190</div>
+                <div class="plan-description">3 meses de treino com desconto</div>
+                
+                <div class="benefits-container">
+                  <div class="benefits-header">
+                    <span class="benefits-toggle">Ver benefícios <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  <ul class="plan-features">
+                    <li>Pagamento único para 3 meses</li>
+                    <li>Desconto especial</li>
+                    <li>Acesso às 2 academias</li>
+                    <li>Acesso ao AbdalaQRmachine</li>
+                    <li>Segunda a sexta, sábados e feriados</li>
+                    <li>Equipamentos diversos</li>
+                    <li>Personals trainers qualificados</li>
+                    <li>Acompanhamento premium</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Plano Semestral (6 meses) -->
+              <div class="plan-card highlight-plan"
+                  data-plan="semestral"
+                  data-total="350">
+                <div class="plan-title">Plano Semestral</div>
+                <div class="plan-price">Total: R$350</div>
+                <div class="plan-description">6 meses de economia</div>
+                
+                <div class="benefits-container">
+                  <div class="benefits-header">
+                    <span class="benefits-toggle">Ver benefícios <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  <ul class="plan-features">
+                    <li>Pagamento único para 6 meses</li>
+                    <li>Desconto especial</li>
+                    <li>Acesso às 2 academias</li>
+                    <li>Acesso ao AbdalaQRmachine</li>
+                    <li>Segunda a sexta, sábados e feriados</li>
+                    <li>Equipamentos diversos</li>
+                    <li>Personals trainers qualificados</li>
+                    <li>Acompanhamento premium</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Plano Anual (12 meses) -->
+              <div class="plan-card highlight-plan"
+                  data-plan="anual"
+                  data-total="500">
+                <div class="plan-title">Plano Anual</div>
+                <div class="plan-price">Total: R$500</div>
+                <div class="plan-description">12 meses pelo melhor preço</div>
+                
+                <div class="benefits-container">
+                  <div class="benefits-header">
+                    <span class="benefits-toggle">Ver benefícios <i class="fas fa-chevron-down"></i></span>
+                  </div>
+                  <ul class="plan-features">
+                    <li>Pagamento único para 12 meses</li>
+                    <li>Maior desconto disponível</li>
+                    <li>Acesso às 2 academias</li>
+                    <li>Acesso ao AbdalaQRmachine</li>
+                    <li>Segunda a sexta, sábados e feriados</li>
+                    <li>Equipamentos diversos</li>
+                    <li>Personals trainers qualificados</li>
+                    <li>Acompanhamento premium</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <input type="hidden" id="selectedPlan" required />
+            </div>
+
+            <!-- Tabela de dias por semana -->
+            <div class="days-selection" id="daysSelectionContainer">
+              <h4 class="selection-title">Frequência de treino</h4>
+              <div class="days-options-container">
+                <p class="selection-description">Quantos dias por semana você deseja treinar?</p>
+                <div class="days-options" id="daysOptions">
+                  <!-- Opções de dias preenchidas dinamicamente via JS -->
+                  <div class="day-option" data-days="3">
+                    <div class="day-option-inner">
+                      <span class="day-value">3 dias</span>
+                      <span class="day-description">por semana</span>
+                    </div>
+                  </div>
+                  <div class="day-option" data-days="7">
+                    <div class="day-option-inner">
+                      <span class="day-value">Todos os dias</span>
+                      <span class="day-description">acesso ilimitado</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resumo do Plano -->
+            <div class="price-summary" id="priceSummary">
+              <h4 class="summary-title">Resumo do seu plano</h4>
+              
+              <div class="summary-container">
+                <div class="summary-row">
+                  <div class="summary-label">Plano selecionado:</div>
+                  <div class="summary-value" id="summaryPlanName">-</div>
+                </div>
+                
+                <div class="summary-row">
+                  <div class="summary-label">Dias por semana:</div>
+                  <div class="summary-value" id="summaryDays">-</div>
+                </div>
+                
+                <div class="summary-row" id="summaryMatricula">
+                  <div class="summary-label">Matrícula:</div>
+                  <div class="summary-value" id="summaryMatriculaValue">-</div>
+                </div>
+                
+                <div class="summary-row" id="summaryMensal">
+                  <div class="summary-label">Mensalidade:</div>
+                  <div class="summary-value" id="summaryMensalValue">-</div>
+                </div>
+                
+                <div class="summary-row highlight-row" id="summaryTotal">
+                  <div class="summary-label">Valor total:</div>
+                  <div class="summary-value" id="summaryTotalValue">-</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-navigation">
+              <button type="button" class="btn btn-prev" id="backToStep1">
+                <i class="fas fa-arrow-left"></i> Voltar
+              </button>
+              <button type="button" class="btn btn-next" id="toStep3">
+                Avançar <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+
+
+
+          <!-- Etapa 3: Informações Pessoais -->
+          <div class="form-step" id="step3">
+            <h4>Informações Pessoais</h4>
+            <label for="name">Nome Completo</label>
+            <input type="text" id="name" required />
+
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" placeholder="(99) 99999-9999" required />
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required />
+
+            <label for="birthdate">Data de Nascimento</label>
+            <input type="date" id="birthdate" required />
+
+            <label for="address">Endereço</label>
+            <input type="text" id="address" required />
+
+            <label for="city">Cidade</label>
+            <input type="text" id="city" required />
+
+            <label for="state">Estado</label>
+            <select id="state" required>
+              <option value="">Selecione</option>
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AP">AP</option>
+              <option value="AM">AM</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="DF">DF</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MT">MT</option>
+              <option value="MS">MS</option>
+              <option value="MG">MG</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PR">PR</option>
+              <option value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RS">RS</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="SC">SC</option>
+              <option value="SP">SP</option>
+              <option value="SE">SE</option>
+              <option value="TO">TO</option>
+            </select>
+
+            <label for="zipcode">CEP</label>
+            <div class="cep-container">
+              <input type="text" id="zipcode" placeholder="00000-000" required />
+              <button type="button" id="validateCep" class="btn btn-validate">
+                Validar CEP
+              </button>
+            </div>
+            <div class="form-navigation">
+              <button type="button" class="btn btn-prev" id="backToStep2">
+                <i class="fas fa-arrow-left"></i> Voltar
+              </button>
+              <button type="button" class="btn btn-next" id="toStep4">
+                Avançar <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Etapa 4: Problemas de Saúde -->
+          <div class="form-step" id="step4">
+            <h4>Problemas de Saúde</h4>
+            <label>Você possui algum problema de saúde?</label>
+            <div class="radio-group">
+              <div>
+                <input
+                  type="radio"
+                  name="healthIssue"
+                  id="noHealthIssue"
+                  value="Não, estou saudável"
+                />
+                <label for="noHealthIssue">Não, estou saudável</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="healthIssue"
+                  id="heartIssue"
+                  value="Problemas cardíacos"
+                />
+                <label for="heartIssue">Problemas cardíacos</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="healthIssue"
+                  id="respiratoryIssue"
+                  value="Problemas respiratórios"
+                />
+                <label for="respiratoryIssue">Problemas respiratórios</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="healthIssue"
+                  id="jointIssue"
+                  value="Problemas articulares"
+                />
+                <label for="jointIssue">Problemas articulares</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="healthIssue"
+                  id="otherHealthIssue"
+                  value="Outro"
+                />
+                <label for="otherHealthIssue">Outro problema de saúde</label>
+              </div>
+            </div>
+            <div id="otherHealthContainer" style="display: none;">
+              <label for="otherHealthDescription">Descreva seu problema:</label>
+              <textarea id="otherHealthDescription" rows="3"></textarea>
+            </div>
+            <div class="form-navigation">
+              <button type="button" class="btn btn-prev" id="backToStep3">
+                <i class="fas fa-arrow-left"></i> Voltar
+              </button>
+              <button type="button" class="btn btn-next" id="toStep5" disabled>
+                Avançar <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Etapa 5: Objetivo de Treino -->
+          <div class="form-step" id="step5">
+            <h4>Objetivo de Treino</h4>
+            <label>Qual é o seu principal objetivo com os treinos?</label>
+            <div class="radio-group">
+              <div>
+                <input
+                  type="radio"
+                  name="trainingGoal"
+                  id="weightLoss"
+                  value="Perda de peso"
+                />
+                <label for="weightLoss">Perda de peso</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="trainingGoal"
+                  id="muscleGain"
+                  value="Ganho de massa muscular"
+                />
+                <label for="muscleGain">Ganho de massa muscular</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="trainingGoal"
+                  id="conditioning"
+                  value="Condicionamento físico"
+                />
+                <label for="conditioning">Condicionamento físico</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="trainingGoal"
+                  id="flexibility"
+                  value="Flexibilidade e mobilidade"
+                />
+                <label for="flexibility">Flexibilidade e mobilidade</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="trainingGoal"
+                  id="otherGoal"
+                  value="Outro"
+                />
+                <label for="otherGoal">Outro objetivo</label>
+              </div>
+            </div>
+            <div id="otherGoalContainer" style="display: none;">
+              <label for="otherGoalDescription">Descreva seu objetivo:</label>
+              <textarea id="otherGoalDescription" rows="3"></textarea>
+            </div>
+            <div class="form-navigation">
+              <button type="button" class="btn btn-prev" id="backToStep4">
+                <i class="fas fa-arrow-left"></i> Voltar
+              </button>
+              <button type="button" class="btn btn-next" id="toStep6" disabled>
+                Avançar <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Etapa 6: Forma de Pagamento -->
+          <div class="form-step" id="step6">
+            <h4>Forma de Pagamento</h4>
+            <label>Escolha a forma de pagamento:</label>
+            <div class="radio-group">
+              <div>
+                <input
+                  type="radio"
+                  name="paymentMethod"
+                  id="creditCard"
+                  value="Cartão de Crédito"
+                />
+                <label for="creditCard">Cartão de Crédito</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="paymentMethod"
+                  id="debitCard"
+                  value="Cartão de Débito"
+                />
+                <label for="debitCard">Cartão de Débito</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="paymentMethod"
+                  id="boleto"
+                  value="Boleto Bancário"
+                />
+                <label for="boleto">Boleto Bancário</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="paymentMethod"
+                  id="pix"
+                  value="Pix"
+                />
+                <label for="pix">Pix</label>
+              </div>
+            </div>
+            <div class="form-navigation">
+              <button type="button" class="btn btn-prev" id="backToStep5">
+                <i class="fas fa-arrow-left"></i> Voltar
+              </button>
+              <button type="submit" class="btn btn-submit" id="submitForm">
+                Enviar Cadastro <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+<script src="/javascript/cadastro.js"></script>
+</body>
+</html>

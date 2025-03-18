@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academias | Abdala Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../estilos/academias.css">
+
+</head>
+<body>
+  <!-- HEADER SECTION -->
+  <header>
+    <button class="back-btn" onclick="location.href='../index.html'">&lt;</button>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <h2 class="section-title">Nossas Academias</h2>
+    
+    <div class="carousel-container">
+      <div class="carousel" id="academia-carousel">
+        <!-- Academia Palmeira -->
+        <div class="carousel-slide" id="slide-1">
+          <div class="slide-background" style="background-image: url('/imagens/academia/academia.jpg');"></div>
+          <div class="slide-overlay">
+            <div class="slide-content">
+              <h3 class="slide-title">Academia Palmeira</h3>
+              <p class="slide-description">A melhor infraestrutura para o seu treino com equipamentos modernos e instrutores qualificados. Venha transformar seu corpo e sua mente em um ambiente premium.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Academia Cuites -->
+        <div class="carousel-slide" id="slide-2">
+          <div class="slide-background" style="background-image: url('/imagens/academia/academia-frente.jpeg');"></div>
+          <div class="slide-overlay">
+            <div class="slide-content">
+              <h3 class="slide-title">Academia Cuites</h3>
+              <p class="slide-description">Ambiente acolhedor e equipamentos de ponta para você alcançar seus objetivos. Nossos profissionais estão prontos para te ajudar a atingir o seu potencial máximo.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Academia Vila Olímpia -->
+        <div class="carousel-slide" id="slide-3">
+          <div class="slide-background" style="background-image: url('/imagens/academia/academia-lado.jpeg');"></div>
+          <div class="slide-overlay">
+            <div class="slide-content">
+              <h3 class="slide-title">Academia Vila Olímpia</h3>
+              <p class="slide-description">Excelência em treinamento e bem-estar com uma localização conveniente e excelentes profissionais. Treinos personalizados e ambiente inspirador para todos os níveis de condicionamento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Controles do carrossel -->
+      <div class="carousel-controls">
+        <div class="carousel-buttons">
+          <button class="carousel-btn" id="prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn" id="next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        
+        <div class="carousel-indicators" id="carousel-indicators">
+          <!-- Indicadores gerados via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER SECTION -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="/imagens/logo/logo-teste.png" alt="AbdalaClubAcademia Logo">
+      </div>
+      <div class="footer-links">
+        <h4>Links Úteis</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#locations">Academias</a></li>
+          <li><a href="#plans">Planos</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#testimonials">Depoimentos</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+        <p><i class="fas fa-envelope"></i> contato@fitacademy.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - Centro</p>
+      </div>
+      <div class="footer-social">
+        <h4>Siga-nos</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/abdala_club_academia/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="https://wa.me/558387559205" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Abdala Club Academia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript para o carrossel -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Elementos DOM
+      const carousel = document.getElementById('academia-carousel');
+      const slides = document.querySelectorAll('.carousel-slide');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      const indicatorsContainer = document.getElementById('carousel-indicators');
+      
+      let currentIndex = 0;
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      // Criar indicadores
+      slides.forEach((_, index) => {
+        const indicator = document.createElement('div');
+        indicator.classList.add('indicator');
+        if (index === 0) indicator.classList.add('active');
+        indicator.addEventListener('click', () => goToSlide(index));
+        indicatorsContainer.appendChild(indicator);
+      });
+      
+      // Marcar o primeiro slide como ativo
+      updateSlides();
+      
+      // Event listeners para botões
+      prevBtn.addEventListener('click', prevSlide);
+      nextBtn.addEventListener('click', nextSlide);
+      
+      // Atualizar slides
+      function updateSlides() {
+        // Atualizar posição do carrossel
+        const translateValue = -currentIndex * 100;
+        carousel.style.transform = `translateX(${translateValue}%)`;
+        
+        // Remover classe ativa de todos os slides
+        slides.forEach(slide => {
+          slide.classList.remove('active');
+        });
+        
+        // Adicionar classe ativa ao slide atual
+        slides[currentIndex].classList.add('active');
+        
+        // Atualizar indicadores
+        const indicators = document.querySelectorAll('.indicator');
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === currentIndex);
+        });
+      }
+      
+      // Ir para slide específico
+      function goToSlide(index) {
+        currentIndex = index;
+        updateSlides();
+      }
+      
+      // Slide anterior
+      function prevSlide() {
+        currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+        updateSlides();
+      }
+      
+      // Próximo slide
+      function nextSlide() {
+        currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+        updateSlides();
+      }
+      
+      // Suporte a gestos de swipe para mobile
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      
+      carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+      
+      function handleSwipe() {
+        const threshold = 75; // Distância mínima para considerar um swipe
+        
+        if (touchEndX < touchStartX - threshold) {
+          // Swipe para a esquerda (próximo)
+          nextSlide();
+        } else if (touchEndX > touchStartX + threshold) {
+          // Swipe para a direita (anterior)
+          prevSlide();
+        }
+      }
+      
+      // Navegação por teclado
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          prevSlide();
+        } else if (e.key === 'ArrowRight') {
+          nextSlide();
+        }
+      });
+      
+      // Auto rotação (opcional - descomente para ativar)
+      /*
+      const autoRotationInterval = 6000; // 6 segundos
+      let autoRotation = setInterval(nextSlide, autoRotationInterval);
+      
+      // Parar auto rotação quando o mouse estiver sobre o carrossel
+      carousel.addEventListener('mouseenter', () => {
+        clearInterval(autoRotation);
+      });
+      
+      // Retomar auto rotação quando o mouse sair do carrossel
+      carousel.addEventListener('mouseleave', () => {
+        autoRotation = setInterval(nextSlide, autoRotationInterval);
+      });
+      */
+    });
+  </script>
+</body>
+</html>
