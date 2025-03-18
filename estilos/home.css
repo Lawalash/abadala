@@ -307,7 +307,7 @@
     .locations {
         position: relative;
         height: 100vh; /* Cobre 100% da altura da viewport */
-        background-image: url('/imagens/academia/academia1.png'); /* Substitua pelo caminho da imagem moderna da academia */
+        background-image: url('../imagens/academia/academia1.png'); /* Substitua pelo caminho da imagem moderna da academia */
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
